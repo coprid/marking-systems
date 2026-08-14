@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>МАРКИНГ СИСТЕМС — Промышленная маркировка и кодирование | Самара</title>
+<meta name="description" content="Маркировочное, этикетировочное и упаковочное оборудование, программно-аппаратные комплексы, расходные материалы и сервис 24/7. Самара, ул. Водников, 28-30.">
+
+<!-- Шрифты (Fontsource CDN) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5/cyrillic-400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5/cyrillic-500.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5/cyrillic-600.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5/cyrillic-700.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5/cyrillic-800.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/cyrillic-400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/cyrillic-600.css">
+
+<!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        ink: '#0B1220',
+        graphite: '#1E293B',
+        neon: '#0EA5E9',
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        mono: ['JetBrains Mono', 'ui-monospace', 'monospace'],
+      },
+      boxShadow: {
+        'neon': '0 0 24px rgba(14,165,233,.35)',
+        'neon-lg': '0 0 60px rgba(14,165,233,.25)',
+        'card': '0 8px 30px rgba(2,6,23,.12)',
+      }
+    }
+  }
+}
+</script>
+
+<style>
+  html{scrollbar-color:#cbd5e1 #f1f5f9}
+  body{background:#ffffff}
+  ::selection{background:#0EA5E9;color:#fff}
+  ::-webkit-scrollbar{width:10px;height:10px}
+  ::-webkit-scrollbar-track{background:#f1f5f9}
+  ::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:8px}
+  ::-webkit-scrollbar-thumb:hover{background:#0EA5E9}
+
+  [id]{scroll-margin-top:96px}
+
+  .bg-grid{
+    background-image:linear-gradient(rgba(148,163,184,.06) 1px,transparent 1px),
+                     linear-gradient(90deg,rgba(148,163,184,.06) 1px,transparent 1px);
+    background-size:44px 44px;
+  }
+  .hero-glow{
+    background:radial-gradient(600px circle at var(--mx,70%) var(--my,30%), rgba(14,165,233,.14), transparent 60%);
+  }
+
+  @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  .marquee-track{animation:marquee 36s linear infinite}
+  .marquee-track:hover{animation-play-state:paused}
+
+  @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+  .floaty{animation:floaty 5s ease-in-out infinite}
+  .floaty-slow{animation:floaty 7s ease-in-out infinite}
+
+  @keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
+  .blink{animation:blink 1.6s ease-in-out infinite}
+
+  @keyframes scanline{0%{top:8%}50%{top:88%}100%{top:8%}}
+  .scanline{animation:scanline 6s ease-in-out infinite}
+
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.revealed{opacity:1;transform:translateY(0)}
+
+  @keyframes toastIn{from{opacity:0;transform:translateY(16px) scale(.96)}to{opacity:1;transform:translateY(0) scale(1)}}
+  .toast{animation:toastIn .35s ease both}
+
+  .card-hover{transition:border-color .3s ease, transform .3s ease, box-shadow .3s ease}
+  .card-hover:hover{border-color:rgba(14,165,233,.5);transform:translateY(-4px);box-shadow:0 10px 40px rgba(14,165,233,.12)}
+
+  .nav-link{position:relative}
+  .nav-link::after{content:'';position:absolute;left:0;bottom:-4px;height:2px;width:0;background:#0EA5E9;transition:width .3s ease}
+  .nav-link:hover::after{width:100%}
+</style>
+</head>
+
+<body class="bg-white text-slate-600 font-sans antialiased overflow-x-hidden">
+
+<!-- ══════════════ ТОП-БАР ══════════════ -->
+<div class="hidden md:block border-b border-slate-800 bg-[#0d1626]">
+  <div class="max-w-7xl mx-auto px-4 lg:px-8 h-9 flex items-center justify-between text-[11px] font-mono text-slate-500">
+    <div class="flex items-center gap-6">
+      <span class="flex items-center gap-1.5">
+        <svg class="w-3.5 h-3.5 text-neon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        443099, г. Самара, ул. Водников, 28-30, офис 301
+      </span>
+      <span class="flex items-center gap-1.5">
+        <svg class="w-3.5 h-3.5 text-neon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        Пн–Пт 9:00–18:00
+      </span>
+    </div>
+    <div class="flex items-center gap-6">
+      <a href="mailto:sales@gpsystems.ru" class="hover:text-neon transition-colors">sales@gpsystems.ru</a>
+      <a href="tel:+78463759633" class="text-slate-300 hover:text-neon transition-colors font-semibold">+7 (846) 375-96-33</a>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ ШАПКА ══════════════ -->
+
+<header id="header" class="sticky top-0 z-40 bg-[#0A2440] backdrop-blur-xl border-b border-[#16325C] transition-shadow">
+  <div class="max-w-7xl mx-auto px-4 lg:px-8 h-16 flex items-center justify-between gap-4">
+    <a href="#home" class="flex items-center gap-3 shrink-0">
+      <img src="logo.png" alt="Логотип МАРКИНГ СИСТЕМС" class="h-11 w-11 object-contain">
+      <span class="leading-tight">
+        <span class="block text-lg font-extrabold tracking-wide"><span class="text-[#FF5A64]">МАРКИНГ</span> <span class="text-[#4DA3DC]">СИСТЕМС</span></span>
+        <span class="block font-mono text-[10px] text-slate-400 tracking-[0.22em] uppercase">новые возможности маркировки</span>
+      </span>
+    </a>
+
+    <nav class="hidden lg:flex items-center gap-6 text-sm font-medium text-slate-300">
+      <a href="#center" class="nav-link hover:text-white transition-colors">Центр услуг</a>
+      <a href="#industries" class="nav-link hover:text-white transition-colors">Отрасли</a>
+      <a href="#service" class="nav-link hover:text-white transition-colors">Сервис</a>
+      <a href="#software" class="nav-link hover:text-white transition-colors">Честный ЗНАК</a>
+      <a href="#contacts" class="nav-link hover:text-white transition-colors">Контакты</a>
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <a href="#contacts" class="hidden sm:inline-flex h-10 items-center rounded-md bg-neon hover:bg-sky-400 px-5 text-sm font-semibold text-white shadow-neon transition-all">
+        Получить консультацию
+      </a>
+      <button id="menuBtn" class="lg:hidden w-10 h-10 grid place-items-center rounded-md border border-slate-600 text-slate-300 hover:border-neon hover:text-neon transition-colors" aria-label="Открыть меню">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Мобильное меню -->
+<div id="mobileMenu" class="fixed inset-0 z-50 bg-[#0A2440]/95 backdrop-blur-xl hidden overflow-y-auto">
+  <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+    <span class="text-white font-extrabold">МАРКИНГ <span class="text-neon">СИСТЕМС</span></span>
+    <button id="menuClose" class="w-10 h-10 grid place-items-center rounded-md border border-slate-600 text-slate-300" aria-label="Закрыть меню">
+      <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+    </button>
+  </div>
+  <nav class="mt-8 px-6 pb-10 flex flex-col gap-5 text-lg font-semibold text-slate-200">
+    <a href="#center" class="mobile-link hover:text-neon">Центр услуг</a>
+    <a href="#industries" class="mobile-link hover:text-neon">Отрасли</a>
+    <a href="#service" class="mobile-link hover:text-neon">Сервис</a>
+    <a href="#software" class="mobile-link hover:text-neon">Честный ЗНАК</a>
+    <a href="#contacts" class="mobile-link hover:text-neon">Контакты</a>
+    <a href="tel:+78463759633" class="mt-4 inline-flex h-12 items-center justify-center rounded-md bg-neon text-white font-semibold shadow-neon">+7 (846) 375-96-33</a>
+  </nav>
+</div>
+
+<main id="home">
+
+<!-- ══════════════ ГЕРОЙ  ══════════════ -->
+<section id="hero" class="relative bg-grid overflow-hidden bg-ink">
+  <div class="hero-glow absolute inset-0 pointer-events-none"></div>
+  <div class="absolute -top-40 -right-40 w-[560px] h-[560px] rounded-full bg-neon/10 blur-[140px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 lg:px-8 pt-8 pb-20 lg:pt-8 lg:pb-28 grid lg:grid-cols-[5fr_6fr] gap-12 items-center relative">
+    <div class="reveal">
+     
+      <h1 class="mt-6 text-4xl md:text-5xl xl:text-6xl font-extrabold text-white leading-[1.08] tracking-tight">
+        Промышленная маркировка и&nbsp;кодирование,
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-neon to-cyan-300">которые держат темп</span>
+        вашего производства
+      </h1>
+
+      <p class="mt-6 text-base md:text-lg text-slate-400 max-w-xl leading-relaxed">
+        Поставляем, интегрируем и обслуживаем каплеструйные (CIJ), термоструйные (TIJ) и термотрансферные (TTO)
+        принтеры, системы DOD/PIJ, лазерное оборудование, этикетировщики и машинное зрение — под требования
+        ХАССП, GS1 и «Честного ЗНАКа».
+      </p>
+
+            <div class="mt-8 flex flex-wrap gap-4">
+        <a href="#contacts" class="inline-flex h-12 items-center rounded-md bg-neon hover:bg-sky-400 px-7 text-sm font-semibold text-white shadow-neon transition-all">
+          Получить консультацию
+        </a>
+      </div>
+      <div class="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-3">
+        <div class="rounded-xl border border-slate-700/60 bg-graphite/70 p-4">
+          <div class="text-2xl font-extrabold text-white font-mono">≤ 4 <span class="text-neon">ч</span></div>
+          <div class="mt-1 text-[11px] text-slate-500 leading-snug">реакция сервисного инженера</div>
+        </div>
+        <div class="rounded-xl border border-slate-700/60 bg-graphite/70 p-4">
+          <div class="text-2xl font-extrabold text-white font-mono">24/7</div>
+          <div class="mt-1 text-[11px] text-slate-500 leading-snug">сервис и удалённый мониторинг</div>
+        </div>
+        <div class="rounded-xl border border-slate-700/60 bg-graphite/70 p-4">
+          <div class="text-2xl font-extrabold text-white font-mono">IP65</div>
+          <div class="mt-1 text-[11px] text-slate-500 leading-snug">защита для влажной мойки</div>
+        </div>
+        <div class="rounded-xl border border-slate-700/60 bg-graphite/70 p-4">
+          <div class="text-2xl font-extrabold text-white font-mono">1200<span class="text-neon">+</span></div>
+          <div class="mt-1 text-[11px] text-slate-500 leading-snug">внедрённых линий по РФ и СНГ</div>
+        </div>
+      </div>
+    </div>
+
+      <div class="relative reveal lg:-top-8">
+      <div class="relative rounded-2xl border border-slate-700/70 bg-graphite shadow-card overflow-hidden">
+               <img src="hero.jpg" alt="Кодирование продукции на пищевой линии" class="w-full h-[400px] md:h-[500px] object-cover object-left">
+        <div class="absolute inset-0 bg-gradient-to-t from-ink/90 via-transparent to-ink/30"></div>
+        <div class="scanline absolute left-0 right-0 h-px bg-neon/70 shadow-neon"></div>
+
+        <div class="absolute top-4 left-4 flex items-center gap-2 rounded-md border border-neon/40 bg-ink/80 backdrop-blur px-3 py-2 font-mono text-[11px] text-neon">
+          <span class="w-1.5 h-1.5 rounded-full bg-neon blink"></span> CIJ-940 HD · ONLINE
+        </div>
+
+        <div class="absolute bottom-4 left-4 right-4 rounded-xl border border-slate-700/70 bg-ink/85 backdrop-blur px-5 py-4 flex items-center justify-between gap-4">
+          <div>
+            <div class="font-mono text-[10px] uppercase tracking-widest text-slate-500">Производительность</div>
+            <div class="text-xl font-extrabold text-white font-mono">420 <span class="text-sm text-slate-400">упак/мин</span></div>
+          </div>
+          <div class="h-8 w-px bg-slate-700"></div>
+          <div>
+            <div class="font-mono text-[10px] uppercase tracking-widest text-slate-500">Контроль кода</div>
+            <div class="text-xl font-extrabold text-neon font-mono">99,8%</div>
+          </div>
+          <div class="h-8 w-px bg-slate-700 hidden sm:block"></div>
+          <div class="hidden sm:block">
+            <div class="font-mono text-[10px] uppercase tracking-widest text-slate-500">Формат</div>
+            <div class="text-sm font-bold text-white font-mono">DataMatrix · GS1</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ БЕГУЩАЯ СТРОКА (как была) ══════════════ -->
+<div class="border-y border-slate-800 bg-[#0d1626] py-4 overflow-hidden">
+  <div class="marquee-track flex w-max gap-0 font-mono text-xs uppercase tracking-[0.25em] text-slate-500">
+    <div class="flex shrink-0">
+      <span class="px-6">Мясопереработка</span><span class="text-neon">◆</span>
+      <span class="px-6">Молочная продукция</span><span class="text-neon">◆</span>
+      <span class="px-6">Напитки и розлив</span><span class="text-neon">◆</span>
+      <span class="px-6">Кондитерские производства</span><span class="text-neon">◆</span>
+      <span class="px-6">Фармацевтика</span><span class="text-neon">◆</span>
+      <span class="px-6">Косметика и бытовая химия</span><span class="text-neon">◆</span>
+      <span class="px-6">Кабель и металлопрокат</span><span class="text-neon">◆</span>
+      <span class="px-6">Стройматериалы</span><span class="text-neon">◆</span>
+      <span class="px-6">Электроника</span><span class="text-neon">◆</span>
+      <span class="px-6">Автокомпоненты</span><span class="text-neon">◆</span>
+    </div>
+    <div class="flex shrink-0" aria-hidden="true">
+      <span class="px-6">Мясопереработка</span><span class="text-neon">◆</span>
+      <span class="px-6">Молочная продукция</span><span class="text-neon">◆</span>
+      <span class="px-6">Напитки и розлив</span><span class="text-neon">◆</span>
+      <span class="px-6">Кондитерские производства</span><span class="text-neon">◆</span>
+      <span class="px-6">Фармацевтика</span><span class="text-neon">◆</span>
+      <span class="px-6">Косметика и бытовая химия</span><span class="text-neon">◆</span>
+      <span class="px-6">Кабель и металлопрокат</span><span class="text-neon">◆</span>
+      <span class="px-6">Стройматериалы</span><span class="text-neon">◆</span>
+      <span class="px-6">Электроника</span><span class="text-neon">◆</span>
+      <span class="px-6">Автокомпоненты</span><span class="text-neon">◆</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ ЦЕНТР ОБОРУДОВАНИЯ И УСЛУГ (белый) ══════════════ -->
+<section id="center" class="py-20 lg:py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto reveal">
+      <div class="font-mono text-xs uppercase tracking-[0.3em] text-neon">// Центр оборудования и услуг</div>
+      <h2 class="mt-3 text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">Всё для маркировки — в одном контуре</h2>
+      <p class="mt-4 text-sm md:text-base text-slate-600">Лучшие и легко интегрируемые решения для эффективной работы современного производства.</p>
+    </div>
+
+    <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div class="card-hover reveal rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+        <span class="w-11 h-11 rounded-lg bg-neon/10 border border-neon/30 grid place-items-center text-neon"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg></span>
+        <h3 class="mt-4 font-bold text-slate-900">Маркировочное оборудование</h3>
+        <p class="mt-2 text-sm text-slate-600">CIJ, TIJ, DOD/PIJ, TTO, лазерные системы — под любой материал и скорость.</p>
+      </div>
+      <div class="card-hover reveal rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+        <span class="w-11 h-11 rounded-lg bg-neon/10 border border-neon/30 grid place-items-center text-neon"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2H2v10l9.3 9.3a1 1 0 0 0 1.4 0l8.6-8.6a1 1 0 0 0 0-1.4L12 2Z"/><circle cx="7.5" cy="7.5" r="1"/></svg></span>
+        <h3 class="mt-4 font-bold text-slate-900">Этикетировочное оборудование</h3>
+        <p class="mt-2 text-sm text-slate-600">Автоматические и полуавтоматические линии нанесения этикетки.</p>
+      </div>
+      <div class="card-hover reveal rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+        <span class="w-11 h-11 rounded-lg bg-neon/10 border border-neon/30 grid place-items-center text-neon"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><polyline points="3.3 7 12 12 20.7 7"/><line x1="12" y1="22" x2="12" y2="12"/></svg></span>
+        <h3 class="mt-4 font-bold text-slate-900">Упаковочное оборудование</h3>
+        <p class="mt-2 text-sm text-slate-600">Комплексные линии: упаковка + маркировка в едином технологическом цикле.</p>
+      </div>
+      <div class="card-hover reveal rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+        <span class="w-11 h-11 rounded-lg bg-neon/10 border border-neon/30 grid place-items-center text-neon"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19.4 13a7.9 7.9 0 0 0 0-2l2.1-1.6a.5.5 0 0 0 .1-.7l-2-3.4a.5.5 0 0 0-.6-.2l-2.5 1a8 8 0 0 0-1.7-1l-.4-2.6a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 0-.5.5l-.4 2.6a8 8 0 0 0-1.7 1l-2.5-1a.5.5 0 0 0-.6.2l-2 3.4a.5.5 0 0 0 .1.7L4.6 11a7.9 7.9 0 0 0 0 2l-2.1 1.6a.5.5 0 0 0-.1.7l2 3.4c.1.2.4.3.6.2l2.5-1a8 8 0 0 0 1.7 1l.4 2.6c0 .3.3.5.5.5h4c.3 0 .5-.2.5-.5l.4-2.6a8 8 0 0 0 1.7-1l2.5 1c.2.1.5 0 .6-.2l2-3.4a.5.5 0 0 0-.1-.7L19.4 13Z"/><circle cx="12" cy="12" r="3"/></svg></span>
+        <h3 class="mt-4 font-bold text-slate-900">Дополнительное оборудование</h3>
+        <p class="mt-2 text-sm text-slate-600">Конвейеры, датчики, стойки, системы отбраковки отпечатка.</p>
+      </div>
+      <div class="card-hover reveal rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+        <span class="w-11 h-11 rounded-lg bg-neon/10 border border-neon/30 grid place-items-center text-neon"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/></svg></span>
+        <h3 class="mt-4 font-bold text-slate-900">Программно-аппаратные комплексы</h3>
+        <p class="mt-2 text-sm text-slate-600">Собственное ПО: настраиваем под каждого заказчика — «Честный ЗНАК», 1С, SCADA.</p>
+      </div>
+      <div class="card-hover reveal rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+        <span class="w-11 h-11 rounded-lg bg-neon/10 border border-neon/30 grid place-items-center text-neon"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11Z"/></svg></span>
+        <h3 class="mt-4 font-bold text-slate-900">Расходные материалы</h3>
+        <p class="mt-2 text-sm text-slate-600">Чернила, растворители, риббоны, этикетки и картриджи всегда на складе.</p>
+      </div>
+      <div class="card-hover reveal rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+        <span class="w-11 h-11 rounded-lg bg-neon/10 border border-neon/30 grid place-items-center text-neon"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76Z"/></svg></span>
+        <h3 class="mt-4 font-bold text-slate-900">Сервис</h3>
+        <p class="mt-2 text-sm text-slate-600">Пусконаладка, ТО, ремонт, подменный фонд и ЗИП со склада.</p>
+      </div>
+      <div class="card-hover reveal rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+        <span class="w-11 h-11 rounded-lg bg-neon/10 border border-neon/30 grid place-items-center text-neon"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3v5ZM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3v5Z"/></svg></span>
+        <h3 class="mt-4 font-bold text-slate-900">Техническая поддержка</h3>
+        <p class="mt-2 text-sm text-slate-600">Специалисты всегда на связи и готовы решить любой запрос — 24/7.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ ОТРАСЛИ (светло-серый) ══════════════ -->
+<section id="industries" class="py-20 lg:py-28 bg-slate-100 border-y border-slate-200">
+  <div class="max-w-7xl mx-auto px-4 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto reveal">
+      <div class="font-mono text-xs uppercase tracking-[0.3em] text-neon">// Отрасли</div>
+      <h2 class="mt-3 text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">Маркировка под задачи любого производства</h2>
+      <p class="mt-4 text-sm md:text-base text-slate-600">От камер глубокой заморозки до высокоскоростных линий розлива — подбираем технологию и расходники точно под условия вашей линии.</p>
+    </div>
+
+    <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div class="card-hover reveal rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+        <span class="w-11 h-11 rounded-lg bg-neon/10 border border-neon/30 grid place-items-center text-neon"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 22h8M12 15v7M12 15a6 6 0 0 0 6-6V3H6v6a6 6 0 0 0 6 6Z"/></svg></span>
+        <h3 class="mt-4 font-bold text-slate-900">Пищевые производства</h3>
+        <p class="mt-2 text-sm text-slate-600">Мясо, птица, полуфабрикаты: IP65, мойка под давлением, низкие температуры.</p>
+        <div class="mt-4 font-mono text-[10px] uppercase tracking-widest text-neon">Защита IP65 от влаги</div>
+      </div>
+      <div class="card-hover reveal rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+        <span class="w-11 h-11 rounded-lg bg-neon/10 border border-neon/30 grid place-items-center text-neon"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 2h8l-1 4h-6L8 2ZM6 6h12v4a6 6 0 0 1-12 0V6ZM12 16v6"/></svg></span>
+        <h3 class="mt-4 font-bold text-slate-900">Молочная продукция</h3>
+        <p class="mt-2 text-sm text-slate-600">Чёткие сроки годности на плёнке, пакетах и картоне, устойчивые к конденсату.</p>
+        <div class="mt-4 font-mono text-[10px] uppercase tracking-widest text-neon">Устойчивость к конденсату</div>
+      </div>
+      <div class="card-hover reveal rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+        <span class="w-11 h-11 rounded-lg bg-neon/10 border border-neon/30 grid place-items-center text-neon"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11Z"/></svg></span>
+        <h3 class="mt-4 font-bold text-slate-900">Напитки и розлив</h3>
+        <p class="mt-2 text-sm text-slate-600">Сверхбыстрое кодирование для линий розлива и укупорки на полной скорости.</p>
+        <div class="mt-4 font-mono text-[10px] uppercase tracking-widest text-neon">Высокоскоростное кодирование</div>
+      </div>
+      <div class="card-hover reveal rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+        <span class="w-11 h-11 rounded-lg bg-neon/10 border border-neon/30 grid place-items-center text-neon"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m19 11-7-7-7 7M12 4v16M5 20h14"/></svg></span>
+        <h3 class="mt-4 font-bold text-slate-900">Фармацевтика</h3>
+        <p class="mt-2 text-sm text-slate-600">Сериализация, агрегация и ввод в оборот по требованиям ГИС МТ.</p>
+        <div class="mt-4 font-mono text-[10px] uppercase tracking-widest text-neon">Готово к сериализации</div>
+      </div>
+      <div class="card-hover reveal rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+        <span class="w-11 h-11 rounded-lg bg-neon/10 border border-neon/30 grid place-items-center text-neon"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3c-4 4-6 7.5-6 11a6 6 0 0 0 12 0c0-3.5-2-7-6-11Z"/><path d="M9 14a3 3 0 0 0 3 3"/></svg></span>
+        <h3 class="mt-4 font-bold text-slate-900">Косметика и бытовая химия</h3>
+        <p class="mt-2 text-sm text-slate-600">Контрастная маркировка на флаконах, тубах и канистрах любых цветов.</p>
+        <div class="mt-4 font-mono text-[10px] uppercase tracking-widest text-neon">Пигментные чернила</div>
+      </div>
+      <div class="card-hover reveal rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+        <span class="w-11 h-11 rounded-lg bg-neon/10 border border-neon/30 grid place-items-center text-neon"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20 20 4M8 20 20 8M4 16 16 4"/></svg></span>
+        <h3 class="mt-4 font-bold text-slate-900">Кабель и металлопрокат</h3>
+        <p class="mt-2 text-sm text-slate-600">Счётчик метража и маркировка на тёмных поверхностях пигментными чернилами.</p>
+        <div class="mt-4 font-mono text-[10px] uppercase tracking-widest text-neon">Обратный контраст</div>
+      </div>
+      <div class="card-hover reveal rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+        <span class="w-11 h-11 rounded-lg bg-neon/10 border border-neon/30 grid place-items-center text-neon"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg></span>
+        <h3 class="mt-4 font-bold text-slate-900">Стройматериалы</h3>
+        <p class="mt-2 text-sm text-slate-600">Крупносимвольная маркировка труб, профилей, мешков и поддонов.</p>
+        <div class="mt-4 font-mono text-[10px] uppercase tracking-widest text-neon">Крупный символ до 20 мм</div>
+      </div>
+      <div class="card-hover reveal rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+        <span class="w-11 h-11 rounded-lg bg-neon/10 border border-neon/30 grid place-items-center text-neon"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/></svg></span>
+        <h3 class="mt-4 font-bold text-slate-900">Электроника и автокомпоненты</h3>
+        <p class="mt-2 text-sm text-slate-600">Перманентная лазерная маркировка плат, корпусов и VIN-табличек.</p>
+        <div class="mt-4 font-mono text-[10px] uppercase tracking-widest text-neon">Лазерная гравировка</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ СЕРВИС (тёмно-синий, как был) ══════════════ -->
+<section id="service" class="py-20 lg:py-28 bg-[#0d1626] border-y border-slate-800">
+  <div class="max-w-7xl mx-auto px-4 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
+    <div class="relative reveal">
+      <div class="relative rounded-2xl border border-slate-700/70 bg-graphite overflow-hidden shadow-card">
+       <img src="service.jpg" alt="Инженер по внедрению и заказчик у линии маркировки" class="w-full h-[380px] md:h-[480px] object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-ink/80 to-transparent"></div>
+        <div class="absolute bottom-5 left-5 right-5 rounded-xl border border-slate-700/70 bg-ink/85 backdrop-blur px-5 py-4">
+          <div class="font-mono text-[10px] uppercase tracking-widest text-slate-500">Диагностика · удалённо</div>
+          <div class="mt-1 flex items-center justify-between">
+            <span class="text-sm font-bold text-white font-mono">INKJET-CODER · Давление OK</span>
+            <span class="text-sm font-bold text-neon font-mono">98%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="font-mono text-xs uppercase tracking-[0.3em] text-neon">// Сервис и поддержка</div>
+      <h2 class="mt-3 text-3xl md:text-4xl font-extrabold text-white tracking-tight">Создано, чтобы минимизировать простои вашей линии</h2>
+      <p class="mt-4 text-slate-400 leading-relaxed">Остановленная линия — это потерянная выручка. Наша сервисная модель построена так, чтобы вернуть вас к кодированию максимально быстро: люди, запчасти и подменное оборудование готовы ещё до того, как понадобятся.</p>
+
+      <ul class="mt-8 space-y-4">
+        <li class="flex gap-3"><span class="mt-0.5 w-6 h-6 shrink-0 rounded-md bg-neon/10 border border-neon/30 grid place-items-center text-neon"><svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span><span class="text-sm text-slate-300"><b class="text-white">Выезд инженера ≤ 4 часов</b> по приоритетному вызову в Самарской области и по всей России.</span></li>
+        <li class="flex gap-3"><span class="mt-0.5 w-6 h-6 shrink-0 rounded-md bg-neon/10 border border-neon/30 grid place-items-center text-neon"><svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span><span class="text-sm text-slate-300"><b class="text-white">Подменный фонд оборудования</b> — кодирование продолжается, пока ваш принтер в ремонте.</span></li>
+        <li class="flex gap-3"><span class="mt-0.5 w-6 h-6 shrink-0 rounded-md bg-neon/10 border border-neon/30 grid place-items-center text-neon"><svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span><span class="text-sm text-slate-300"><b class="text-white">95% запчастей на складе</b> — отгрузка в день обращения, без долгого ожидания.</span></li>
+        <li class="flex gap-3"><span class="mt-0.5 w-6 h-6 shrink-0 rounded-md bg-neon/10 border border-neon/30 grid place-items-center text-neon"><svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span><span class="text-sm text-slate-300"><b class="text-white">Собственное ПО</b> — настраиваем программное обеспечение под каждого заказчика.</span></li>
+        <li class="flex gap-3"><span class="mt-0.5 w-6 h-6 shrink-0 rounded-md bg-neon/10 border border-neon/30 grid place-items-center text-neon"><svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span><span class="text-sm text-slate-300"><b class="text-white">Техническая поддержка 24/7</b> — специалисты всегда на связи и готовы решить любой запрос.</span></li>
+      </ul>
+
+      <div class="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4">
+        <div class="text-center rounded-xl border border-slate-700/60 bg-graphite/60 py-5">
+          <div class="text-3xl font-extrabold text-neon font-mono"><span class="counter" data-target="1200">0</span>+</div>
+          <div class="mt-1 text-[11px] text-slate-500">линий внедрено</div>
+        </div>
+        <div class="text-center rounded-xl border border-slate-700/60 bg-graphite/60 py-5">
+          <div class="text-3xl font-extrabold text-white font-mono"><span class="counter" data-target="25">0</span></div>
+          <div class="mt-1 text-[11px] text-slate-500">отраслей применения</div>
+        </div>
+        <div class="text-center rounded-xl border border-slate-700/60 bg-graphite/60 py-5">
+          <div class="text-3xl font-extrabold text-white font-mono"><span class="counter" data-target="98.7" data-decimals="1">0</span>%</div>
+          <div class="mt-1 text-[11px] text-slate-500">SLA по сервису</div>
+        </div>
+        <div class="text-center rounded-xl border border-slate-700/60 bg-graphite/60 py-5">
+          <div class="text-3xl font-extrabold text-white font-mono"><span class="counter" data-target="15">0</span></div>
+          <div class="mt-1 text-[11px] text-slate-500">лет в маркировке</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ ЭТАПЫ (белый) ══════════════ -->
+<section id="process" class="py-20 lg:py-28 bg-white">
+  <div class="max-w-7xl mx-auto px-4 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto reveal">
+      <div class="font-mono text-xs uppercase tracking-[0.3em] text-neon">// Как мы работаем</div>
+      <h2 class="mt-3 text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">От аудита до сервиса — четыре шага</h2>
+    </div>
+
+    <div class="mt-14 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="card-hover reveal relative rounded-xl border border-slate-200 bg-white p-6 pt-8 shadow-sm">
+        <span class="absolute -top-5 left-6 w-10 h-10 rounded-lg bg-neon text-white font-extrabold font-mono grid place-items-center shadow-neon">01</span>
+        <h3 class="mt-2 font-bold text-slate-900">Аудит и тест</h3>
+        <p class="mt-3 text-sm text-slate-600 leading-relaxed">Выезжаем на производство, тестируем маркировку на ваших образцах бесплатно, замеряем скорости линии.</p>
+        <div class="mt-4 font-mono text-[10px] text-slate-500">≈ 1–3 дня</div>
+      </div>
+      <div class="card-hover reveal relative rounded-xl border border-slate-200 bg-white p-6 pt-8 shadow-sm">
+        <span class="absolute -top-5 left-6 w-10 h-10 rounded-lg bg-white border border-neon/50 text-neon font-extrabold font-mono grid place-items-center">02</span>
+        <h3 class="mt-2 font-bold text-slate-900">Подбор и КП</h3>
+        <p class="mt-3 text-sm text-slate-600 leading-relaxed">Готовим техническое решение, спецификацию и коммерческое предложение с расчётом окупаемости.</p>
+        <div class="mt-4 font-mono text-[10px] text-slate-500">≈ 2 дня</div>
+      </div>
+      <div class="card-hover reveal relative rounded-xl border border-slate-200 bg-white p-6 pt-8 shadow-sm">
+        <span class="absolute -top-5 left-6 w-10 h-10 rounded-lg bg-white border border-neon/50 text-neon font-extrabold font-mono grid place-items-center">03</span>
+        <h3 class="mt-2 font-bold text-slate-900">Внедрение</h3>
+        <p class="mt-3 text-sm text-slate-600 leading-relaxed">Монтаж, пусконаладка, интеграция с 1С, SCADA и «Честным ЗНАКом», обучение персонала.</p>
+        <div class="mt-4 font-mono text-[10px] text-slate-500">от 5 дней</div>
+      </div>
+      <div class="card-hover reveal relative rounded-xl border border-slate-200 bg-white p-6 pt-8 shadow-sm">
+        <span class="absolute -top-5 left-6 w-10 h-10 rounded-lg bg-white border border-neon/50 text-neon font-extrabold font-mono grid place-items-center">04</span>
+        <h3 class="mt-2 font-bold text-slate-900">Сервис 24/7</h3>
+        <p class="mt-3 text-sm text-slate-600 leading-relaxed">Регламентное ТО, ЗИП, подменный фонд и удалённый мониторинг состояния принтеров.</p>
+        <div class="mt-4 font-mono text-[10px] text-slate-500">весь срок службы</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ ЧЕСТНЫЙ ЗНАК (синий баннер на светлом) ══════════════ -->
+<section id="software" class="py-20 lg:py-28 bg-slate-100 border-y border-slate-200">
+  <div class="max-w-7xl mx-auto px-4 lg:px-8">
+    <div class="reveal rounded-lg border border-[#16325C] bg-[#0A2440] shadow-card overflow-hidden">
+
+      <!-- Служебная шапка панели -->
+      <div class="flex flex-wrap items-center justify-between gap-3 border-b border-white/10 px-6 md:px-10 py-4">
+        <div class="font-mono text-[11px] uppercase tracking-[0.25em] text-slate-400">Обязательная маркировка · ГИС МТ</div>
+        <div class="flex items-center gap-2 font-mono text-[11px] text-slate-400">
+          <span class="w-1.5 h-1.5 rounded-full bg-neon blink"></span>
+          Работаем со всеми товарными группами
+        </div>
+      </div>
+
+      <div class="grid lg:grid-cols-5 gap-10 p-6 md:p-10">
+        <!-- Слева: суть и этапы -->
+        <div class="lg:col-span-3">
+          <h2 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight">Комплексное решение «Честный ЗНАК» под ключ</h2>
+          <p class="mt-4 text-slate-300 max-w-xl leading-relaxed">
+            Реализуем весь контур прослеживаемости — от кода на единице продукции до ввода паллет в оборот —
+            без остановки текущих процессов производства.
+          </p>
+
+          <ol class="mt-8 border-t border-white/10">
+            <li class="flex gap-5 py-4 border-b border-white/10">
+              <span class="font-mono text-sm text-neon w-8 shrink-0 pt-0.5">01</span>
+              <div>
+                <div class="text-sm font-semibold text-white">Генерация и печать кодов DataMatrix GS1</div>
+                <div class="mt-1 text-sm text-slate-400">Подбираем технологию под вашу упаковку: CIJ, лазер, TTO или этикетирование</div>
+              </div>
+            </li>
+            <li class="flex gap-5 py-4 border-b border-white/10">
+              <span class="font-mono text-sm text-neon w-8 shrink-0 pt-0.5">02</span>
+              <div>
+                <div class="text-sm font-semibold text-white">Контроль и верификация</div>
+                <div class="mt-1 text-sm text-slate-400">Машинное зрение проверяет каждый код по ISO 15415, брак отбраковывается автоматически</div>
+              </div>
+            </li>
+            <li class="flex gap-5 py-4 border-b border-white/10">
+              <span class="font-mono text-sm text-neon w-8 shrink-0 pt-0.5">03</span>
+              <div>
+                <div class="text-sm font-semibold text-white">Агрегация</div>
+                <div class="mt-1 text-sm text-slate-400">Связываем «единица → короб → паллета» для группового ввода в оборот</div>
+              </div>
+            </li>
+            <li class="flex gap-5 py-4 border-b border-white/10">
+              <span class="font-mono text-sm text-neon w-8 shrink-0 pt-0.5">04</span>
+              <div>
+                <div class="text-sm font-semibold text-white">Интеграция и ввод в оборот</div>
+                <div class="mt-1 text-sm text-slate-400">Собственное ПО: связка с СУЗ, 1С и SCADA, отчётность в ГИС МТ</div>
+              </div>
+            </li>
+          </ol>
+
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href="#contacts" class="inline-flex h-12 items-center rounded-md bg-neon hover:bg-sky-400 px-7 text-sm font-semibold text-white shadow-neon transition-all">Получить схему внедрения</a>
+            <a href="tel:+78463759633" class="inline-flex h-12 items-center rounded-md border border-white/30 hover:border-white px-7 text-sm font-semibold text-blue-50 transition-all">+7 (846) 375-96-33</a>
+          </div>
+        </div>
+
+        <!-- Справа: образец кода маркировки -->
+        <div class="lg:col-span-2 flex flex-col items-center justify-center gap-4">
+            <div class="-rotate-2 rounded-md bg-white p-5" style="box-shadow:0 20px 50px rgba(2,6,23,.45)">
+            <div class="w-48 h-48 md:w-56 md:h-56" id="dmGrid" style="display:grid;grid-template-columns:repeat(22,1fr);grid-template-rows:repeat(22,1fr)" aria-hidden="true"></div>
+            <div class="mt-3 text-center font-mono text-[10px] tracking-wider text-slate-800">(01)04600000000000 (21)XXXXXXXX</div>
+          </div>
+          <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-slate-500">Образец кода маркировки · DataMatrix GS1</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ КОНТАКТЫ (белый, светлые карточки) ══════════════ -->
+<section id="contacts" class="py-20 lg:py-28 bg-white">
+  <div class="max-w-7xl mx-auto px-4 lg:px-8 grid lg:grid-cols-2 gap-12">
+    <div class="reveal">
+      <div class="font-mono text-xs uppercase tracking-[0.3em] text-neon">// Контакты</div>
+      <h2 class="mt-3 text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">Обсудим задачу маркировки?</h2>
+      <p class="mt-4 text-slate-600 max-w-md leading-relaxed">Наши специалисты по продажам и технической поддержке предоставят всю необходимую информацию о лучших и легко интегрируемых решениях для кодирования и маркировки.</p>
+
+      <div class="mt-10 space-y-4">
+        <div class="flex items-start gap-4 rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+          <span class="w-11 h-11 shrink-0 rounded-lg bg-neon/10 border border-neon/30 grid place-items-center text-neon"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+          <div>
+            <div class="font-mono text-[10px] uppercase tracking-widest text-slate-500">Адрес офиса и демо-зала</div>
+            <div class="mt-1 text-sm font-semibold text-slate-900">443099, г. Самара, ул. Водников, дом 28-30, офис 301</div>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+          <span class="w-11 h-11 shrink-0 rounded-lg bg-neon/10 border border-neon/30 grid place-items-center text-neon"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></span>
+          <div>
+            <div class="font-mono text-[10px] uppercase tracking-widest text-slate-500">Телефон</div>
+            <a href="tel:+78463759633" class="mt-1 block text-sm font-semibold text-slate-900 hover:text-neon transition-colors">+7 (846) 375-96-33</a>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+          <span class="w-11 h-11 shrink-0 rounded-lg bg-neon/10 border border-neon/30 grid place-items-center text-neon"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
+          <div>
+            <div class="font-mono text-[10px] uppercase tracking-widest text-slate-500">Email</div>
+            <a href="mailto:sales@gpsystems.ru" class="mt-1 block text-sm font-semibold text-slate-900 hover:text-neon transition-colors">sales@gpsystems.ru</a>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+          <span class="w-11 h-11 shrink-0 rounded-lg bg-neon/10 border border-neon/30 grid place-items-center text-neon"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10Z"/></svg></span>
+          <div>
+            <div class="font-mono text-[10px] uppercase tracking-widest text-slate-500">Сайт компании</div>
+            <a href="https://gpsystems.ru" target="_blank" rel="noopener" class="mt-1 block text-sm font-semibold text-slate-900 hover:text-neon transition-colors">gpsystems.ru</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <form id="leadForm" class="rounded-2xl border border-slate-200 bg-white p-7 md:p-9 shadow-card" novalidate>
+        <h3 class="text-xl font-bold text-slate-900">Заявка на подбор оборудования</h3>
+        <p class="mt-2 text-sm text-slate-600">Ответим в течение рабочего дня. Поля со * обязательны.</p>
+
+        <div class="mt-7 grid sm:grid-cols-2 gap-4">
+          <div>
+            <label for="fName" class="block text-xs font-semibold text-slate-600 mb-2">Ваше имя *</label>
+            <input id="fName" required type="text" placeholder="Иван Петров" class="w-full h-11 rounded-md border border-slate-300 bg-white px-4 text-sm text-slate-900 placeholder:text-slate-400 focus:border-neon focus:outline-none focus:ring-1 focus:ring-neon transition-colors">
+          </div>
+          <div>
+            <label for="fPhone" class="block text-xs font-semibold text-slate-600 mb-2">Телефон *</label>
+            <input id="fPhone" required type="tel" placeholder="+7 (___) ___-__-__" class="w-full h-11 rounded-md border border-slate-300 bg-white px-4 text-sm text-slate-900 placeholder:text-slate-400 focus:border-neon focus:outline-none focus:ring-1 focus:ring-neon transition-colors">
+          </div>
+        </div>
+        <div class="mt-4">
+          <label for="fEmail" class="block text-xs font-semibold text-slate-600 mb-2">Email</label>
+          <input id="fEmail" type="email" placeholder="you@company.ru" class="w-full h-11 rounded-md border border-slate-300 bg-white px-4 text-sm text-slate-900 placeholder:text-slate-400 focus:border-neon focus:outline-none focus:ring-1 focus:ring-neon transition-colors">
+        </div>
+        <div class="mt-4">
+          <label for="fTech" class="block text-xs font-semibold text-slate-600 mb-2">Технология</label>
+          <select id="fTech" class="w-full h-11 rounded-md border border-slate-300 bg-white px-4 text-sm text-slate-900 focus:border-neon focus:outline-none focus:ring-1 focus:ring-neon transition-colors">
+            <option>Нужна консультация</option>
+            <option>Каплеструйная печать (CIJ)</option>
+            <option>Термоструйная печать (TIJ)</option>
+            <option>DOD / портативные маркеры</option>
+            <option>Лазерная маркировка</option>
+            <option>Термотрансферная печать (TTO)</option>
+            <option>Этикетирование</option>
+            <option>Машинное зрение / Track &amp; Trace</option>
+            <option>«Честный ЗНАК» под ключ</option>
+          </select>
+        </div>
+        <div class="mt-4">
+          <label for="fMsg" class="block text-xs font-semibold text-slate-600 mb-2">Опишите задачу</label>
+          <textarea id="fMsg" rows="4" placeholder="Продукция, тип упаковки, скорость линии, текущая проблема…" class="w-full rounded-md border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:border-neon focus:outline-none focus:ring-1 focus:ring-neon transition-colors resize-none"></textarea>
+        </div>
+
+        <label class="mt-5 flex items-start gap-3 text-xs text-slate-500 cursor-pointer select-none">
+          <input id="fAgree" type="checkbox" checked class="mt-0.5 w-4 h-4 rounded border-slate-300 bg-white accent-[#0EA5E9]">
+          Согласен на обработку персональных данных в соответствии с 152-ФЗ
+        </label>
+
+        <button type="submit" id="submitBtn" class="mt-7 w-full inline-flex h-12 items-center justify-center gap-2 rounded-md bg-neon hover:bg-sky-400 text-sm font-semibold text-white shadow-neon transition-all">
+          Отправить заявку
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ══════════════ ПОДВАЛ (тёмно-синий) ══════════════ -->
+<footer class="border-t border-[#16325C] bg-[#0A2440]">
+  <div class="max-w-7xl mx-auto px-4 lg:px-8 py-14 grid md:grid-cols-3 gap-10">
+    <div>
+      <div class="flex items-center gap-3">
+        <img src="logo.png" alt="Логотип МАРКИНГ СИСТЕМС" class="h-10 w-10 object-contain">
+        <span class="text-white font-extrabold">МАРКИНГ <span class="text-neon">СИСТЕМС</span></span>
+      </div>
+      <p class="mt-4 text-sm text-slate-400 leading-relaxed max-w-xs">Новые возможности кодирования: маркировочное, этикетировочное и упаковочное оборудование, программно-аппаратные комплексы, расходные материалы и сервис.</p>
+      <div class="mt-5 font-mono text-[11px] text-slate-500">gpsystems.ru · Самара</div>
+    </div>
+    <div>
+      <div class="font-mono text-xs uppercase tracking-[0.25em] text-slate-500">Навигация</div>
+      <nav class="mt-4 grid grid-cols-2 gap-x-6 gap-y-2.5 text-sm text-slate-400">
+        <a href="#center" class="hover:text-neon transition-colors">Центр услуг</a>
+        <a href="#industries" class="hover:text-neon transition-colors">Отрасли</a>
+        <a href="#service" class="hover:text-neon transition-colors">Сервис</a>
+        <a href="#software" class="hover:text-neon transition-colors">Честный ЗНАК</a>
+        <a href="#contacts" class="hover:text-neon transition-colors">Контакты</a>
+      </nav>
+    </div>
+    <div>
+      <div class="font-mono text-xs uppercase tracking-[0.25em] text-slate-500">Контакты</div>
+      <ul class="mt-4 space-y-2.5 text-sm text-slate-400">
+        <li>443099, г. Самара, ул. Водников, дом 28-30, офис 301</li>
+        <li><a href="tel:+78463759633" class="hover:text-neon transition-colors font-semibold text-slate-300">+7 (846) 375-96-33</a></li>
+        <li><a href="mailto:sales@gpsystems.ru" class="hover:text-neon transition-colors">sales@gpsystems.ru</a></li>
+        <li class="text-slate-500">Пн–Пт 9:00–18:00</li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 lg:px-8 h-14 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-slate-500">
+      <span>© 2025 МАРКИНГ СИСТЕМС · Промышленная маркировка и кодирование</span>
+      <span class="font-mono">Политика конфиденциальности · 152-ФЗ</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Тосты -->
+<div id="toastWrap" class="fixed bottom-6 right-6 z-[60] flex flex-col gap-3 w-[calc(100vw-3rem)] max-w-sm"></div>
+
+<script>
+(function(){
+  'use strict';
+  var $ = function(s,c){return (c||document).querySelector(s)};
+  var $$ = function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
+
+  /* Тень шапки при прокрутке */
+  var header = $('#header');
+  window.addEventListener('scroll', function(){
+    header.classList.toggle('shadow-neon-lg', window.scrollY > 10);
+  }, {passive:true});
+
+  /* Мобильное меню */
+  var menu = $('#mobileMenu');
+  $('#menuBtn').addEventListener('click', function(){ menu.classList.remove('hidden'); document.body.style.overflow='hidden'; });
+  function closeMenu(){ menu.classList.add('hidden'); document.body.style.overflow=''; }
+  $('#menuClose').addEventListener('click', closeMenu);
+  $$('.mobile-link').forEach(function(a){ a.addEventListener('click', closeMenu); });
+
+  /* Свечение в герое за курсором */
+  var hero = $('#hero');
+  hero.addEventListener('mousemove', function(e){
+    var r = hero.getBoundingClientRect();
+    hero.style.setProperty('--mx', ((e.clientX - r.left)/r.width*100)+'%');
+    hero.style.setProperty('--my', ((e.clientY - r.top)/r.height*100)+'%');
+  });
+
+  /* Появление блоков при прокрутке */
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){ en.target.classList.add('revealed'); io.unobserve(en.target); }
+    });
+  }, {threshold:.12});
+  $$('.reveal').forEach(function(el){ io.observe(el); });
+
+  /* Счётчики */
+  function animateCounter(el){
+    var target = parseFloat(el.dataset.target);
+    var dec = parseInt(el.dataset.decimals||'0',10);
+    var dur = 1600, t0 = null;
+    function step(ts){
+      if(!t0) t0 = ts;
+      var p = Math.min((ts-t0)/dur, 1);
+      var eased = 1 - Math.pow(1-p, 3);
+      el.textContent = (target*eased).toFixed(dec).replace('.',',');
+      if(p<1) requestAnimationFrame(step);
+      else el.textContent = target.toFixed(dec).replace('.',',');
+    }
+    requestAnimationFrame(step);
+  }
+  var cio = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){ animateCounter(en.target); cio.unobserve(en.target); }
+    });
+  }, {threshold:.6});
+  $$('.counter').forEach(function(el){ cio.observe(el); });
+
+  /* Реалистичный DataMatrix на стикере */
+  var dm = $('#dmGrid');
+  if(dm){
+    var N = 22;
+    var seed = 42;
+    function rnd(){ seed = (seed*9301+49297)%233280; return seed/233280; }
+    for(var r=0;r<N;r++){
+      for(var c=0;c<N;c++){
+        var cell = document.createElement('div');
+        var dark;
+        if(r===N-1 || c===0) dark = true;             /* сплошной уголок (finder) */
+        else if(r===0 || c===N-1) dark = (r+c)%2===0; /* пунктир (timing) */
+        else dark = rnd()>0.5;                        /* данные */
+        cell.style.background = dark ? '#0f172a' : '#ffffff';
+        dm.appendChild(cell);
+      }
+    }
+  }
+
+  /* Тосты */
+  function toast(msg, type){
+    var wrap = $('#toastWrap');
+    var el = document.createElement('div');
+    el.className = 'toast rounded-lg border px-4 py-3.5 text-sm font-semibold backdrop-blur-xl shadow-card ' +
+      (type==='error' ? 'border-red-500/40 bg-red-500/10 text-red-600' : 'border-neon/40 bg-sky-50 text-neon');
+    el.textContent = msg;
+    wrap.appendChild(el);
+    setTimeout(function(){
+      el.style.transition='opacity .4s ease, transform .4s ease';
+      el.style.opacity='0'; el.style.transform='translateY(8px)';
+      setTimeout(function(){ el.remove(); }, 420);
+    }, 4200);
+  }
+
+  /* Кнопка каталога */
+  var cat = $('#catalogBtn');
+  if(cat){ cat.addEventListener('click', function(){ toast('Каталог 2025 (PDF) придёт на вашу почту после отправки заявки.'); }); }
+
+  /* Форма */
+  var form = $('#leadForm');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var name = $('#fName').value.trim();
+    var phone = $('#fPhone').value.trim();
+    var agree = $('#fAgree').checked;
+    if(!name || !phone){ toast('Заполните обязательные поля: имя и телефон.', 'error'); return; }
+    if(!agree){ toast('Необходимо согласие на обработку персональных данных.', 'error'); return; }
+    var btn = $('#submitBtn');
+    btn.disabled = true;
+    btn.innerHTML = '<span class="w-4 h-4 rounded-full border-2 border-white/40 border-t-white animate-spin"></span> Отправляем…';
+    setTimeout(function(){
+      btn.disabled = false;
+      btn.innerHTML = 'Отправить заявку <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>';
+      form.reset(); $('#fAgree').checked = true;
+      toast('Заявка отправлена! Инженер свяжется с вами в течение рабочего дня.');
+    }, 900);
+  });
+})();
+</script>
+</body>
+</html>
